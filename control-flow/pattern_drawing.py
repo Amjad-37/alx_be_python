@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-size_str = input("Enter the size of the pattern: ")
-size = int(size_str)
+size = int(input("Enter the size of the pattern: "))
 
 row = 0
 while row < size:
-    for _ in range(size):
+    col = 0
+    while col < size:
         print("*", end="")
+        col += 1
     print()
     row += 1
