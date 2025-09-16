@@ -23,3 +23,7 @@ elif operation == "/":
         print("Cannot divide by zero.")
 else:
     print("Invalid operation selected.")
+
+# match operation:
+#    case "+":
+#        ...
