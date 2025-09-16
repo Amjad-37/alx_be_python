@@ -6,24 +6,24 @@ operation = input("Choose the operation (+, -, *, /): ")
 num1 = float(num1_str)
 num2 = float(num2_str)
 
-if operation == "+":
-    result = num1 + num2
-    print(f"The result is {result}")
-elif operation == "-":
-    result = num1 - num2
-    print(f"The result is {result}")
-elif operation == "*":
-    result = num1 * num2
-    print(f"The result is {result}")
-elif operation == "/":
-    if num2 != 0:
-        result = num1 / num2
-        print(f"The result is {result}")
-    else:
-        print("Cannot divide by zero.")
-else:
-    print("Invalid operation selected.")
+result = None
 
-# match operation:
-#    case "+":
-#        ...
+match operation:
+    case "+":
+        result = num1 + num2
+    case "-":
+        result = num1 - num2
+    case "*":
+        result = num1 * num2
+    case "/":
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "Cannot divide by zero."
+    case _:
+        result = "Invalid operation selected."
+
+if isinstance(result, str):
+    print(result)
+else:
+    print(f"The result is {result}")
